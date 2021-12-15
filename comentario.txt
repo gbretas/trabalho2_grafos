@@ -1,0 +1,26 @@
+# /* 
+# Gustavo Torres Bretas Alves
+# Matricula: 689655
+# Matéria: Teoria dos Grafos e Computabilidade
+# Professor: Silvio Jamil Ferzoli Guimarães
+# Data: 15/12/2021
+# */
+
+
+Trabalho reentregue na matéria de Grafos para reavaliação, relacionado ao Trabalho 2 - Caminhos
+
+Estou enviando esse trabalho com o objetivo de apresentar o documento (em PDF e
+TEX) e um novo código fonte desenvolvido para o trabalho após entender sobre a correta aplicação de um método eficaz para o encontro dos caminhos disjuntos.
+
+Pelos fatos citados acima e por ter enviado erroneamente um trabalho de outra matéria
+por desatenção na primeira entrega, refiz esse trabalho com o objetivo de apresenta-ló mais bem
+redigido, alcançando um melhor desempenho, desde formato de apresentação, formatação do
+documento, organização dos conteúdos e qualidade do código.
+
+Agradeço pela compreensão e abertura para essa entrega da atividade repositiva.
+
+
+Para executar o código do algoritmo e os testes implementados, você poderá rodar em
+sua maquina utilizando os arquivos que estão com código fonte, utilizando do seguinte comando: python index.py ou rodar pelo Replit, uma plataforma para compartilhar códigos fontes e a execução, para que possamos minimizar o problema de incompatibilidade do programa
+com alguma arquitetura, ou configurações de compiladores diferentes.
+https://replit.com/@GustavoBretas/Trabalho2Grafos

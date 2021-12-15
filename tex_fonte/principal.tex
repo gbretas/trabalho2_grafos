@@ -1,0 +1,161 @@
+
+\documentclass[a4paper,12pt,Times]{article}
+\usepackage{abakos}  %pacote com padrão da Abakos baseado no padrão da PUC
+
+% Pacote para a definição de novas cores
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+%\definecolor{oldmauve}{rgb}{0.4, 0.19, 0.28}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings,newtxtt}
+
+\lstset{basicstyle=\ttfamily, keywordstyle=\bfseries}
+
+\lstset{%
+  escapeinside={(*}{*)},%
+}
+
+\newcommand{\estiloJava}{
+\lstset{
+    language=Java,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{jpurple}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{verde},
+    morecomment=[s][\color{blue}]{/**}{*/},
+    extendedchars=true,
+    showspaces=false,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    backgroundcolor=\color{cyan!10},
+    breakautoindent=true,
+    captionpos=b,
+    xleftmargin=0pt,
+    tabsize=2
+}}
+
+\newcommand{\estiloR}{
+  \lstset{ %
+    language=R,                     % the language of the code
+    basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+    numbers=left,                   % where to put the line-numbers
+    numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+    stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                    % will be numbered
+    numbersep=5pt,                  % how far the line-numbers are from the code
+    backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+    showspaces=false,               % show spaces adding particular underscores
+    showstringspaces=false,         % underline spaces within strings
+    showtabs=false,                 % show tabs within strings adding particular underscores
+    frame=single,                   % adds a frame around the code
+    rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+    tabsize=2,                      % sets default tabsize to 2 spaces
+    captionpos=b,                   % sets the caption-position to bottom
+    breaklines=true,                % sets automatic line breaking
+    breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+    title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                    % also try caption instead of title
+    keywordstyle=\color{blue},      % keyword style
+    commentstyle=\color{darkgreen},   % comment style
+    stringstyle=\color{red},      % string literal style
+    escapeinside={\%*}{*)},         % if you want to add a comment within your code
+    morekeywords={*,...}          % if you want to add more keywords to the set
+}}
+
+
+\newcommand{\comment}[1]{}
+\graphicspath{ {figuras/} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Capa da revista
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\setcounter{page}{1} %iniciar contador de pagina de valor especificado
+\newcommand{\monog}{Reentrega da trabalho da matéria de Grafos Trabalho 2 - Caminhos}
+\newcommand{\monogES}{}
+\newcommand{\tipo}{Trabalho}  % Especificar a seção tipo do trabalho: Artigo, Resumo, Tese, Dociê etc
+\newcommand{\origem}{Brasil }
+\newcommand{\editorial}{Belo Horizonte, p. \thepage - \pageref{LastPage}, dez. 2021}  % p. xx-xx – páginas inicial-final do artigo
+\newcommand{\lcc}{\scriptsize{Licença Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported}}
+
+%%%%%%%%%%%%%%%%%INFORMAÇÕES SOBRE AUTOR PRINCIPAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\AutorA}{Gustavo Torres Bretas Alves}
+\newcommand{\funcaoA}{}
+\newcommand{\emailA}{gtbalves@sga.pucminas.br}
+\newcommand{\cursA}{Aluno do Programa de Graduação em Ciência da Computação}
+
+\newcommand{\AutorB}{Silvio Jamil Ferzoli Guimarães}
+\newcommand{\funcaoB}{}
+\newcommand{\emailB}{}
+\newcommand{\cursB}{Professor do Programa de Graduação em Ciência da Computação}
+
+% Definir macros para o nome da Instituição, da Faculdade, etc.
+\newcommand{\univ}{Pontifícia Universidade Católica de Minas Gerais}
+
+\newcommand{\keyword}[1]{\textsf{#1}}
+
+\begin{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Pagina de titulo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\includegraphics[scale=0.2]{figuras/brasao.jpg} \\
+PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+Instituto de Ciências Exatas e de Informática
+
+% \vspace{1.0cm}
+ \vspace{0cm} {
+ \singlespacing \Large{\monog \symbolfootnote[1]{Artigo apresentado ao Instituto de Ciências Exatas e Informática da Pontifícia Universidade Católica de Minas Gerais} \\ }
+  \normalsize{\monogES}
+ }
+
+Trabalho reentregue na matéria de Grafos para reavaliação, relacionado ao \textbf{Trabalho 2 - Caminhos}
+ 
+\end{center}
+\vspace{1.0cm}
+\begin{flushright}
+\singlespacing 
+\normalsize{\AutorA \footnote{\funcaoA \cursA, \origem -- \emailA . }} \\
+\normalsize{\AutorB \footnote{\funcaoB \cursB, \origem -- \emailB . }} \\
+\end{flushright}
+\thispagestyle{empty}
+\selectlanguage{brazilian}
+\onehalfspace  % espaçamento 1.5 entre linhas
+\setlength{\parindent}{1.25cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SUMÁRIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\tableofcontents
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INICIO DO TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{textos}
+
+\include{implementacao}
+\include{experimentos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO TEXTO
+%% Inicio da Bibliografia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\selectlanguage{brazilian}
+% \newpage
+% \singlespace{
+%     \renewcommand\refname{REFERÊNCIAS}
+%     %\bibliographystyle{abnt-alf}
+%     \bibliography{bibliografia}
+% }
+
+\end{document}
