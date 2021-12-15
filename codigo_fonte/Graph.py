@@ -1,5 +1,13 @@
 # -*- coding: utf-8 -*-
-class Graph:
+# /* 
+# Gustavo Torres Bretas Alves
+# Matricula: 689655
+# Matéria: Terioa Geral de Grafos e Computabilidade
+# Professor: Silvio Jamil Ferzoli Guimarães
+# Data: 15/12/2021
+# */
+
+class CaminhosDisjuntosGrafo:
     def __init__(self, graph):
         self.graph = graph
         self. ROW = len(graph)
@@ -57,7 +65,9 @@ class Graph:
                 v = parent[v]
             res_caminho = caminho[::-1]
             res_caminho.append(original_destino)
-            print(res_caminho)
+            string_caminho = [str(int) for int in res_caminho]
+
+            print(' -> '.join(string_caminho))
 
         print("Caminhos disjuntos encontrados: %d " % max_caminhos_disjuntos)
 
