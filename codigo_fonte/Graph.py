@@ -2,7 +2,7 @@
 # /* 
 # Gustavo Torres Bretas Alves
 # Matricula: 689655
-# Matéria: Terioa Geral de Grafos e Computabilidade
+# Matéria: Teoria dos Grafos e Computabilidade
 # Professor: Silvio Jamil Ferzoli Guimarães
 # Data: 15/12/2021
 # */
@@ -37,11 +37,9 @@ class CaminhosDisjuntosGrafo:
         parent = [-1] * (self.ROW)
         max_caminhos_disjuntos = 0
         
-
         while self.busca_bfs(origem, destino, parent):
             original_destino = destino;
             caminho = [];
-
             path = float("Inf")
             s = destino
             
@@ -50,12 +48,8 @@ class CaminhosDisjuntosGrafo:
                 s = parent[s]
                 caminho.append(s);
             
-
             # Adicionar o fluxo ao grafo
-            # max_caminhos_disjuntos += path
-            max_caminhos_disjuntos += 1
-            
-
+            max_caminhos_disjuntos += 1   
             # atualizar o grafo residual com o fluxo
             v = destino
             while(v != origem):
@@ -69,6 +63,6 @@ class CaminhosDisjuntosGrafo:
 
             print(' -> '.join(string_caminho))
 
-        print("Caminhos disjuntos encontrados: %d " % max_caminhos_disjuntos)
+        print("Max. de caminhos disjuntos: %d " % max_caminhos_disjuntos)
 
         return max_caminhos_disjuntos

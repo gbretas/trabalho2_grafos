@@ -2,7 +2,7 @@
 # /* 
 # Gustavo Torres Bretas Alves
 # Matricula: 689655
-# Matéria: Terioa Geral de Grafos e Computabilidade
+# Matéria: Teoria dos Grafos e Computabilidade
 # Professor: Silvio Jamil Ferzoli Guimarães
 # Data: 15/12/2021
 # */

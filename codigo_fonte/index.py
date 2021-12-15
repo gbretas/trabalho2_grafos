@@ -2,7 +2,7 @@
 # /* 
 # Gustavo Torres Bretas Alves
 # Matricula: 689655
-# Matéria: Terioa Geral de Grafos e Computabilidade
+# Matéria: Teoria dos Grafos e Computabilidade
 # Professor: Silvio Jamil Ferzoli Guimarães
 # Data: 15/12/2021
 # */
@@ -19,8 +19,9 @@ from Graph import CaminhosDisjuntosGrafo
 
 print("Aluno: Gustavo Torres Bretas Alves")
 print("Matricula: 689655")
-print("Matéria: Terioa Geral de Grafos e Computabilidade")
+print("Matéria: Teoria dos Grafos e Computabilidade")
 print("Professor: Silvio Jamil Ferzoli Guimarães")
+print("Os exemplos estão demostrados no arquivo PDF")
 print("Trabalho 2 - Caminhos")
 print("Data: 15/12/2021\n")
 
